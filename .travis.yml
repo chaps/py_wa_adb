@@ -2,21 +2,24 @@ language: python
 python:
   - "3.6"
 
+
 # command to install dependencies
-install_deps: 
-  - pip install coverage
-  - pip install coveralls
-  
-build:
-  - python setup.py sdist
-  - python setup.py bdist_wheel
+jobs:
+  include:
+    - stage: install_deps
+      script: pip install coverage
+      script: pip install coveralls
 
-script:
-  - pip install ./
+    - stage: build
+      script: python setup.py sdist
+      script: python setup.py bdist_wheel
 
-tests:
-  - echo "MOCK"
+    - stage: install
+      script: pip install ./
 
-upload:
-  - echo "MOCK"
+    - stage: tests
+      script: echo "MOCK"
+
+    - stage: upload
+      script: echo "MOCK"
   
