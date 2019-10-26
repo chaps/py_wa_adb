@@ -9,17 +9,13 @@ jobs:
     - stage: install_deps
       script: pip install coverage
       script: pip install coveralls
-
     - stage: build
       script: python setup.py sdist
       script: python setup.py bdist_wheel
-
     - stage: install
       script: pip install ./
-
     - stage: tests
       script: echo "MOCK"
-
     - stage: upload
       script: echo "MOCK"
   
