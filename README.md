@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chaps/py_wa_adb.svg?branch=master)](https://travis-ci.org/chaps/py_wa_adb)
+
 # Python Whatsapp ADB
 
 ## Python utility methods for Whatsapp utilities through ADB commands.
