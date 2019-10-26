@@ -1,20 +1,20 @@
 language: python
 python:
   - "3.6"
+
 # command to install dependencies
+install_deps: 
+  - pip install ./
+  - pip install coverage
+  - pip install coveralls
+  
 build:
   - python setup.py sdist
   - python setup.py bdist_wheel
-install: 
-  - pip install -e ./
-  - pip install pytest
-  - pip install twine
-  - pip install coverage
-  - pip install coveralls
 
-  # command to run tests
-script:
-  - pytest tests  
+tests:
+  - echo "MOCK"
+
 upload:
-  - echo MOCK
-#  - python3 -m twine upload dist/*
+  - echo "MOCK"
+  
