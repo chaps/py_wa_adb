@@ -13,4 +13,7 @@ jobs:
       script: python setup.py bdist_wheel  
     - stage: tests
       script: pip install ./; pip install pytest; pytest tests/
-    - 
+    - stage: upload
+      script: pip install twine; python setup.py sdist; python setup.py bdist_wheel; twine upload -u $TWINE_USERNAME -p $TWINE_PASSWORD dist/*
+
+    
