@@ -14,6 +14,6 @@ jobs:
     - stage: tests
       script: pip install ./; pip install pytest; pytest tests/
     - stage: upload
-      script: pip install twine; rm -rf dist/ ; python setup.py sdist; python setup.py bdist_wheel; twine upload -u $TWINE_USERNAME -p $TWINE_PASSWORD dist/*
+      script: pip install twine; rm -rf dist/ ; python setup.py sdist; python setup.py bdist_wheel; twine upload --skip-existing -u $TWINE_USERNAME -p $TWINE_PASSWORD dist/*
 
     
