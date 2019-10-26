@@ -12,6 +12,7 @@ jobs:
       script: python setup.py sdist
       script: python setup.py bdist_wheel  
     - stage: tests
+      script: pip install ./
       script: pip install pytest
       script: pip install coverage
       script: pip install coveralls
