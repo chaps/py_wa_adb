@@ -4,7 +4,6 @@ python:
 
 # command to install dependencies
 install_deps: 
-  - pip install ./
   - pip install coverage
   - pip install coveralls
   
