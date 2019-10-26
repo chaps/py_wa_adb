@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-10-25
+### Edits
+- .travis.yml Adds commands to upload build to pypi
+
 
 ## [0.1.1] - 2019-10-25
 ### Added
