@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [0.1.1] - 2019-10-25
+### Added
+- Adds travis.yml file for CI.
+
 ## [0.1.0] - 2019-10-25
 ### Added
 - This CHANGELOG file to hopefully serve as an evolving example of a

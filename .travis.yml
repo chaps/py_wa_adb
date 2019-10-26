@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+
+
+# command to install dependencies
+jobs:
+  include:
+    - stage: install
+      script: pip install ./
+    - stage: build
+      script: python setup.py sdist
+      script: python setup.py bdist_wheel  
+    - stage: tests
+      script: pip install ./; pip install pytest; pytest tests/
+    - 
