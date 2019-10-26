@@ -16,6 +16,4 @@ jobs:
       script: pip install coverage
       script: pip install coveralls
       script: pytest tests/
-    - stage: upload
-      script: echo "MOCK"
   
