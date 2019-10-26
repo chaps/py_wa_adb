@@ -6,16 +6,16 @@ python:
 # command to install dependencies
 jobs:
   include:
-    - stage: install_deps
-      script: pip install coverage
-      script: pip install coveralls
-    - stage: build
-      script: python setup.py sdist
-      script: python setup.py bdist_wheel
     - stage: install
       script: pip install ./
+   - stage: build
+      script: python setup.py sdist
+      script: python setup.py bdist_wheel  
     - stage: tests
-      script: echo "MOCK"
+      script: pip install pytest
+      script: pip install coverage
+      script: pip install coveralls
+      script: pytest tests/
     - stage: upload
       script: echo "MOCK"
   
