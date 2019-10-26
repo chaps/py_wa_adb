@@ -8,6 +8,8 @@ jobs:
   include:
     - stage: install
       script: pip install ./
+      script: pip install pytest
+      script: pytest tests/
     - stage: build
       script: python setup.py sdist
       script: python setup.py bdist_wheel  
