@@ -7,13 +7,10 @@ python:
 jobs:
   include:
     - stage: install
-      script: pip install ./; pip freeze; python -c "from py_wa_adb.wa_adb import WA_ADB, datetime_to_epoch; from py_wa_adb.wa_sqlite import WA_SQLITE" ; pip install pytest; pytest tests/
+      script: pip install ./
     - stage: build
       script: python setup.py sdist
       script: python setup.py bdist_wheel  
     - stage: tests
-      script: pip install ./
-      script: pip install pytest
-      script: pip install coverage
-      script: pip install coveralls
-      script: pytest tests/      
+      script: pip install ./; pip install pytest; pytest tests/
+    - 
