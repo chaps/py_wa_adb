@@ -43,15 +43,15 @@ class WA_ADB(object):
         return self.wrap_adb_shell("chmod 777 {}").format(WA_SQLITE.DATABASE_PATH)
     
     def get_insert_into_messages_query(self, wa_number_id, message):
-        return self.wrap_adb_shell("sqlite3 {} \\\"{}\\\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_insert_into_messages_query(wa_number_id, message))
+        return self.wrap_adb_shell("sqlite3 {} \"{}\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_insert_into_messages_query(wa_number_id, message))
         pass
 
     def get_insert_into_chat_list_query(self, wa_number_id):
-        return self.wrap_adb_shell("sqlite3 {} \\\"{}\\\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_insert_into_chat_list_query(wa_number_id))
+        return self.wrap_adb_shell("sqlite3 {} \"{}\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_insert_into_chat_list_query(wa_number_id))
         pass
 
     def get_update_chatlist_query(self, wa_number_id):
-        return self.wrap_adb_shell("sqlite3 {} \\\"{}\\\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_update_chatlist_query(wa_number_id))
+        return self.wrap_adb_shell("sqlite3 {} \"{}\"").format(WA_SQLITE.DATABASE_PATH,WA_SQLITE.get_update_chatlist_query(wa_number_id))
     
     def get_read_messages_query(self, **kwargs):
         """
